@@ -66,7 +66,14 @@ namespace ConsoleApp2  //
             //or
             int age = int.Parse(Console.ReadLine()); // cin for int
 
-            
+
+
+            int[] array = new int[10]; // create massiv
+
+            foreach (var item in array)  // we can't chenge into foreach 
+            {
+                Console.WriteLine(item);
+            }
 
 
 
