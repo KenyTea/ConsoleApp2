@@ -61,24 +61,34 @@ namespace ConsoleApp2  //
 
             // cin in C#
 
-            string temp = Console.ReadLine();
-            int age2 = int.Parse(temp);
-            //or
-            int age = int.Parse(Console.ReadLine()); // cin for int
+            //string temp = Console.ReadLine();
+            //int age2 = int.Parse(temp);
+            ////or
+            //int age = int.Parse(Console.ReadLine()); // cin for int
 
 
 
-            int[] array = new int[10]; // create massiv
+            //int[] array = new int[10]; // create massiv
 
-            foreach (var item in array)  // we can't chenge into foreach 
+            //foreach (var item in array)  // we can't chenge into foreach 
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            //  HW#2
+
+            int spaseCounter = 0;
+            char inputChar = (char)Console.Read();
+            while (inputChar != '.')
             {
-                Console.WriteLine(item);
+                if(inputChar == ' ')
+                {
+                    spaseCounter++;
+                }
+                inputChar = (char)Console.Read();
             }
 
-
-
-
-
+            Console.WriteLine(spaseCounter);
             Console.ReadLine(); // like system pause
             Console.ReadKey(); // like system pause
         }
