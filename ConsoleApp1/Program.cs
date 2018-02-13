@@ -14,7 +14,8 @@ namespace ConsoleApp1
             int a = 5;
             int b = 10;
             int c = 15;
-            Console.WriteLine(a ); 
+            Console.Write(a ); Console.Write(' '); Console.Write(b); Console.Write(' '); Console.Write(c);
+            Console.WriteLine();
         }
     }
 }
