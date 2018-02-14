@@ -59,9 +59,45 @@ namespace ConsoleApp1
                           b.	А и В; 
                           c.	В или С.
                           */
-            bool A = true;
-            bool B = false;
-            bool C = false;
+            //bool A = true;
+            //bool B = false;
+            //bool C = false;
+            //bool sum;
+
+            //sum = (A || B);
+            //Console.WriteLine(sum);
+            //sum = (A && B);
+            //Console.WriteLine(sum);
+            //sum = (B || C);
+            //Console.WriteLine(sum);
+
+            /*7.	Даны радиус круга и сторона квадрата. У какой фигуры площадь больше?*/
+
+            
+            Console.WriteLine("Enter the radius of the circle ");
+            int radius = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the values of the side of the square ");
+            int side = int.Parse(Console.ReadLine());
+            double Sr;
+            double P = 3.14;
+            Sr = (P * (radius * radius));
+            Console.Write("Area of a circle "); Console.WriteLine(Sr);
+            double Ss = side * side;
+            Console.Write("Square of a square "); Console.WriteLine(Ss);
+            Console.WriteLine();
+
+            if (Sr > Ss)
+            {
+                Console.WriteLine("Area of the circle is larger than the square");
+                Console.WriteLine();
+            }
+            else if (Sr < Ss)
+            {
+                Console.WriteLine("Square of the square is larger than the area of the circle");
+                Console.WriteLine();
+            }
+            else Console.WriteLine("The square of the square and the area of the circle are equal");
+            Console.WriteLine();
 
 
 
