@@ -177,13 +177,13 @@ namespace ConsoleApp1
             //}
 
             //// b
-            Console.WriteLine("Enter number whith range 10 - 20");
-            int b = int.Parse(Console.ReadLine());
-            Console.WriteLine();
-            for (int i = 10; i < b; i++)
-            {
-                Console.WriteLine((i * i) + " ");
-            }
+            //Console.WriteLine("Enter number whith range 10 - 20");
+            //int b = int.Parse(Console.ReadLine());
+            //Console.WriteLine();
+            //for (int i = 10; i < b; i++)
+            //{
+            //    Console.WriteLine((i * i) + " ");
+            //}
 
 
         }
