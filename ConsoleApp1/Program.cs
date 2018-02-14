@@ -10,10 +10,21 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             /*1.	Составить программу вывода на экран в одну строку трех любых чисел с двумя пробелами между ними.*/
+            //variant 1
             //int a = 5;
             //int b = 10;
             //int c = 15;
             //Console.Write(a ); Console.Write(' '); Console.Write(b); Console.Write(' '); Console.Write(c);
+            //Console.WriteLine();
+            //Console.WriteLine();
+
+            //variant 2
+            //Random rand = new Random();
+            //int d, e, f;
+            //d = rand.Next(0,10);
+            //e = rand.Next(0,10);
+            //f = rand.Next(0,10);
+            //Console.Write(d); Console.Write(' '); Console.Write(e); Console.Write(' '); Console.Write(f);
             //Console.WriteLine();
             //Console.WriteLine();
 
@@ -27,7 +38,7 @@ namespace ConsoleApp1
             /*3.	Дано расстояние в сантиметрах. Найти число полных метров в нем.*/
             //Console.WriteLine("Enter number");
             //float temp = float.Parse(Console.ReadLine());
-            //temp = temp / 1000;
+            //temp = temp / 100;
             //Console.Write(temp); Console.WriteLine(" m.");
             //Console.WriteLine();
 
@@ -99,30 +110,30 @@ namespace ConsoleApp1
             //Console.WriteLine();
 
             /*8.    Даны объемы и массы двух тел из разных материалов. Материал какого из тел имеет большую плотность?*/
-            Console.WriteLine("Enter V and M for solid #1");
-            int Vs = int.Parse(Console.ReadLine());
-            int Vs2 = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter V and M for solid #2");
-            int MasS = int.Parse(Console.ReadLine());
-            int MasS2 = int.Parse(Console.ReadLine());
-            int solid, solid2;
-            solid = Vs / MasS;
-            solid2 = Vs2 / MasS2;
-            Console.Write("The density of the first material"); Console.WriteLine(solid);
-            Console.Write("The density of the second material"); Console.WriteLine(solid2);
-            Console.WriteLine();
-            if (solid > solid2)
-            {
-                Console.WriteLine("The density of the first material is higher than the second");
-            }
-           else if (solid < solid2)
-            {
-                Console.WriteLine("The density of the second material is higher than the first");
-            }
-            else
-            {
-                Console.WriteLine("The density of both materials is the same");
-            }
+            // Console.WriteLine("Enter V and M for solid #1");
+            // int Vs = int.Parse(Console.ReadLine());
+            // int Vs2 = int.Parse(Console.ReadLine());
+            // Console.WriteLine("Enter V and M for solid #2");
+            // int MasS = int.Parse(Console.ReadLine());
+            // int MasS2 = int.Parse(Console.ReadLine());
+            // int solid, solid2;
+            // solid = Vs / MasS;
+            // solid2 = Vs2 / MasS2;
+            // Console.Write("The density of the first material"); Console.WriteLine(solid);
+            // Console.Write("The density of the second material"); Console.WriteLine(solid2);
+            // Console.WriteLine();
+            // if (solid > solid2)
+            // {
+            //     Console.WriteLine("The density of the first material is higher than the second");
+            // }
+            //else if (solid < solid2)
+            // {
+            //     Console.WriteLine("The density of the second material is higher than the first");
+            // }
+            // else
+            // {
+            //     Console.WriteLine("The density of both materials is the same");
+            // }
 
 
 
