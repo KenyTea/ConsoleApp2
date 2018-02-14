@@ -62,30 +62,87 @@ namespace _14._02._18
             //    Console.WriteLine();
             //}
 
+            //Random random = new Random();
+            //int maxLengthSubarrayIndex = default(int),
+            //    maxLengthSubarrayValue = default(int),
+            //    maxSumSubarrayIndex = default(int),
+            //    maxSumSubarrayValue = default(int);
+
+            //int[][] juggerArrayTwo = new int[random.Next(3, 7)][];
+
+            //for (int i = 0; i < juggerArrayTwo.Length; i++)
+            //{
+            //    juggerArrayTwo[i] = new int[random.Next(1, 6)];
+            //    if (juggerArrayTwo[i].Length > maxLengthSubarrayValue)
+            //    {
+            //        maxLengthSubarrayValue = juggerArrayTwo[i].Length;
+            //        maxLengthSubarrayIndex = i;
+            //    }
+            //    int subarraySum = 0;
+            //    for (int j = 0; j < juggerArrayTwo[i].Length; j++)
+            //    {
+            //        juggerArrayTwo[i][j] = random.Next(1, 10);
+            //        Console.Write(juggerArrayTwo[i][j] + " ");
+            //        subarraySum += juggerArrayTwo[i][j];
+            //    }
+            //    if (subarraySum > maxSumSubarrayValue)
+            //    {
+            //        maxSumSubarrayValue = subarraySum;
+            //        maxSumSubarrayIndex = i;
+            //    }
+            //    Console.WriteLine();
+            //}
+
+            //Console.WriteLine();
+
+            //Console.WriteLine(maxLengthSubarrayIndex + " " + maxLengthSubarrayValue);
+            //Console.WriteLine(maxSumSubarrayIndex + " " + maxSumSubarrayValue);
             Random rand = new Random();
-            int maxlengthIndex = default(int),
-                maxlengthValue = default(int),
-                maxsumIndex = default(int),
-                maxsumValue = default(int);
-                
-            int[][] juggedArrayTwo = new int[rand.Next(3,7)][]);                            // зубчатый массив
-            for (int i = 0; i < juggedArrayTwo.Length; i++)
+            int find = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+            int[] arrBinarFound = new int[10];
+            for (int i = 0; i < arrBinarFound.Length; i++)
             {
-                juggedArrayTwo[i] = new int[rand.Next(1, 6)];
-                  
-               if(juggedArrayTwo[i].Length > maxlengthValue)
-                {
-                    maxlengthValue = juggedArrayTwo[i].Length;
-                    maxlengthIndex = i;
-                }
-                int subarraySum = 0;
-                for (int j = 0; j < juggedArrayTwo[i].Length; j++)
-                {
-                    juggedArrayTwo[i][j] = rand.Next(1, 10);
-                    Console.Write(juggedArrayTwo[i][j]);
-                }
-                Console.WriteLine();
+            arrBinarFound[i] = rand.Next(0, 10);
+                Console.Write(arrBinarFound[i] + " ");
             }
+            Console.WriteLine();
+
+            Array.Sort(arrBinarFound);                                      // -------Sort--------
+
+            for (int i = 0; i < arrBinarFound.Length; i++)
+            {
+                Console.Write(arrBinarFound[i] + " ");
+            int left = arrBinarFound[0];
+            int right = arrBinarFound[9];
+            int midle = left + ((right - left) / 2);
+                if (find < midle)
+                {
+                    for (int j = 0; j < midle; j++)
+                    {
+                        if (arrBinarFound[j] == find)
+                        {
+                            Console.WriteLine("Found in " + arrBinarFound[j]);
+                        }
+                        else if (find > midle)
+                        {
+                            for (int k = midle; k < right; k++)
+                            {
+                                if (arrBinarFound[k] == find)
+                                {
+                                    Console.WriteLine("Found in " + arrBinarFound[k]);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+           
+            Console.WriteLine();
+            //Console.WriteLine(left);
+            //Console.WriteLine(right);
+            //Console.WriteLine(midle);
 
             Console.ReadLine();
         }

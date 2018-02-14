@@ -138,8 +138,8 @@ namespace ConsoleApp1
             /* 9.	 Известны сопротивления двух несоединенных друг с другом участков электрической цепи
               и напряжение на каждом из них. По какому участку протекает меньший ток?*/
 
-            //double R1, R2, 
-            //    U1, U2, 
+            //double R1, R2,
+            //    U1, U2,
             //    I1, I2;
             //Console.WriteLine("Enter sopr1 and napr1");
             //R1 = double.Parse(Console.ReadLine());
@@ -163,6 +163,27 @@ namespace ConsoleApp1
 
             //else
             //    Console.WriteLine("They are equal");
+
+            /*Напечатать "столбиком": 
+                              a.	все целые числа от 20 до 35;
+                              b.	квадраты всех целых чисел от 10 до b (значение b вводится с клавиатуры; b > 10);
+                              c.	третьи степени всех целых чисел от a до 50 (значение a вводится с клавиатуры; a < 50);
+                              d.	все целые числа от a до b (значения a и b вводятся с клавиатуры; b > a).
+                              */
+            //// a
+            //for (int i = 20; i <= 35; i++)
+            //{
+            //    Console.WriteLine(i + " ");
+            //}
+
+            //// b
+            Console.WriteLine("Enter number whith range 10 - 20");
+            int b = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+            for (int i = 10; i < b; i++)
+            {
+                Console.WriteLine((i * i) + " ");
+            }
 
 
         }
