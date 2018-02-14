@@ -11,22 +11,23 @@ namespace ConsoleApp1
         {
             /*1.	Составить программу вывода на экран в одну строку трех любых чисел с двумя пробелами между ними.*/
             //variant 1
+
             //int a = 5;
             //int b = 10;
             //int c = 15;
-            //Console.Write(a ); Console.Write(' '); Console.Write(b); Console.Write(' '); Console.Write(c);
-            //Console.WriteLine();
+            //Console.WriteLine( a + " " + b + " " + c);
             //Console.WriteLine();
 
-            //variant 2
+            //variant 2 with Ranrom numbers
+
             //Random rand = new Random();
-            //int d, e, f;
-            //d = rand.Next(0,10);
-            //e = rand.Next(0,10);
-            //f = rand.Next(0,10);
-            //Console.Write(d); Console.Write(' '); Console.Write(e); Console.Write(' '); Console.Write(f);
+            //int d = rand.Next(0, 10);
+            //int e = rand.Next(0, 10);
+            //int f = rand.Next(0, 10);
+            //Console.WriteLine(d + " " + e + " " + f);
             //Console.WriteLine();
-            //Console.WriteLine();
+
+            //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
             /*2.	Вывести на экран числа 5, 10 и 21 одно под другим.*/
             //int d = 5;
@@ -35,6 +36,8 @@ namespace ConsoleApp1
             //Console.WriteLine(d); Console.WriteLine(e); Console.WriteLine(f);
             //Console.WriteLine();
 
+            //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
             /*3.	Дано расстояние в сантиметрах. Найти число полных метров в нем.*/
             //Console.WriteLine("Enter number");
             //float temp = float.Parse(Console.ReadLine());
@@ -42,11 +45,15 @@ namespace ConsoleApp1
             //Console.Write(temp); Console.WriteLine(" m.");
             //Console.WriteLine();
 
+            //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
             /*4.	С некоторого момента прошло 234 дня. Сколько полных недель прошло за этот период?*/
             //int days = 234;
             //int weeks;
             //weeks = days / 7;
             //Console.Write(weeks); Console.WriteLine(" weeks");
+
+            //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
             /*5.	Дано двузначное число. Найти:
                         a.	число десятков в нем;
@@ -63,6 +70,8 @@ namespace ConsoleApp1
             //Console.Write("unit - "); Console.WriteLine(unit);
             //Console.Write("sum - "); Console.WriteLine(sum);
             //Console.Write("multiplication - "); Console.WriteLine(multi);
+
+            //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
             /*6.	Вычислить значение логического выражения при следующих значениях логических величин
              * А, В и С: А = Истина, В = Ложь, С = Ложь:
@@ -81,6 +90,8 @@ namespace ConsoleApp1
             //Console.WriteLine(sum);
             //sum = (B || C);
             //Console.WriteLine(sum);
+
+            //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
             /*7.	Даны радиус круга и сторона квадрата. У какой фигуры площадь больше?*/
 
@@ -109,6 +120,8 @@ namespace ConsoleApp1
             //else Console.WriteLine("The square of the square and the area of the circle are equal");
             //Console.WriteLine();
 
+            //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
             /*8.    Даны объемы и массы двух тел из разных материалов. Материал какого из тел имеет большую плотность?*/
             // Console.WriteLine("Enter V and M for solid #1");
             // int Vs = int.Parse(Console.ReadLine());
@@ -134,6 +147,8 @@ namespace ConsoleApp1
             // {
             //     Console.WriteLine("The density of both materials is the same");
             // }
+
+            //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
             /* 9.	 Известны сопротивления двух несоединенных друг с другом участков электрической цепи
               и напряжение на каждом из них. По какому участку протекает меньший ток?*/
@@ -164,7 +179,9 @@ namespace ConsoleApp1
             //else
             //    Console.WriteLine("They are equal");
 
-            /*Напечатать "столбиком": 
+            //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+            /*10.    Напечатать "столбиком": 
                               a.	все целые числа от 20 до 35;
                               b.	квадраты всех целых чисел от 10 до b (значение b вводится с клавиатуры; b > 10);
                               c.	третьи степени всех целых чисел от a до 50 (значение a вводится с клавиатуры; a < 50);
@@ -180,12 +197,54 @@ namespace ConsoleApp1
             //Console.WriteLine("Enter number whith range 10 - 20");
             //int b = int.Parse(Console.ReadLine());
             //Console.WriteLine();
-            //for (int i = 10; i < b; i++)
+            //if (b < 10)                                  // check b > 10
             //{
-            //    Console.WriteLine((i * i) + " ");
+            //    Console.WriteLine("Error");
+            //}
+            //else
+            //{
+            //    for (int i = 10; i < b; i++)
+            //    {
+            //        Console.WriteLine(i * i);
+            //    }
             //}
 
+            //// c
+            //Console.WriteLine("Enter number whith range 1 - 50");
+            //int a = int.Parse(Console.ReadLine());
+            //Console.WriteLine();
+            //if (a > 50)                                 // check a < 50
+            //{
+            //    Console.WriteLine("Error");
+            //}
+            //else
+            //{
+            //    for (int i = a; i <= 50; i++)
+            //    {
+            //        int res = i * i * i;
+            //        Console.WriteLine(res);
+            //    }
+            //}
 
+            ////d
+            //Console.WriteLine("Enter numbers a and b (b > a)");
+            //int a = int.Parse(Console.ReadLine());
+            //int b = int.Parse(Console.ReadLine());
+            //Console.WriteLine();
+            //if (a > b)                                  // check a < b
+            //{
+            //    Console.WriteLine("Error");
+            //}
+            //else
+            //{
+            //    for (int i = a; i <= b; i++)
+            //    {
+            //        Console.WriteLine(i);
+            //    }
+            //}
+
+            Console.WriteLine();
+            Console.ReadLine();
         }
     }
 }
