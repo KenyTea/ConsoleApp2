@@ -135,6 +135,34 @@ namespace ConsoleApp1
             //     Console.WriteLine("The density of both materials is the same");
             // }
 
+            /* 9.	 Известны сопротивления двух несоединенных друг с другом участков электрической цепи
+              и напряжение на каждом из них. По какому участку протекает меньший ток?*/
+
+            //double R1, R2, 
+            //    U1, U2, 
+            //    I1, I2;
+            //Console.WriteLine("Enter sopr1 and napr1");
+            //R1 = double.Parse(Console.ReadLine());
+            //U1 = double.Parse(Console.ReadLine());
+
+            //Console.WriteLine("Enter sopr2 and napr2");
+            //R2 = double.Parse(Console.ReadLine());
+            //U2 = double.Parse(Console.ReadLine());
+
+            //I1 = U1 / R1; Console.Write(" "); Console.WriteLine(I1); Console.WriteLine();
+            //I2 = U2 / R2; Console.Write(" "); Console.WriteLine(I2); Console.WriteLine();
+
+            //if (I1 > I2)
+            //{
+            //    Console.WriteLine("The first section has less current");
+            //}
+            //else if (I1 < I2)
+            //{
+            //    Console.WriteLine("The second section has less current");
+            //}
+
+            //else
+            //    Console.WriteLine("They are equal");
 
 
         }

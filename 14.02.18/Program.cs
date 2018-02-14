@@ -49,16 +49,42 @@ namespace _14._02._18
             //Console.WriteLine();
             //Console.WriteLine();
             //-----------------------------------------------------------------------------
-            Random rand = new Random();                                    // Random
-            int[][] juggedArray = new int[5][];                            // зубчатый массив
-            for (int i = 0; i < 5; i++)
+            //Random rand = new Random();                                    // Random
+            //int[][] juggedArray = new int[5][];                            // зубчатый массив
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    juggedArray[i] = new int[(i * 3) +1];
+            //    for (int j = 0; j < juggedArray[i].Length; j++)
+            //    {
+            //        juggedArray[i][j] = rand.Next(0,10);                   // Random
+            //        Console.Write(juggedArray[i][j] + " ");
+            //    }
+            //    Console.WriteLine();
+            //}
+
+            Random rand = new Random();
+            int maxlengthIndex = default(int),
+                maxlengthValue = default(int),
+                maxsumIndex = default(int),
+                maxsumValue = default(int);
+                
+            int[][] juggedArrayTwo = new int[rand.Next(3,7)][]);                            // зубчатый массив
+            for (int i = 0; i < juggedArrayTwo.Length; i++)
             {
-                juggedArray[i] = new int[(i * 3) +1];
-                for (int j = 0; j < juggedArray[i].Length; j++)
+                juggedArrayTwo[i] = new int[rand.Next(1, 6)];
+                  
+               if(juggedArrayTwo[i].Length > maxlengthValue)
                 {
-                    juggedArray[i][j] = rand.Next(0,10);                   // Random
-                    Console.Write(juggedArray[i][j] + " ");
+                    maxlengthValue = juggedArrayTwo[i].Length;
+                    maxlengthIndex = i;
                 }
+                int subarraySum = 0;
+                for (int j = 0; j < juggedArrayTwo[i].Length; j++)
+                {
+                    juggedArrayTwo[i][j] = rand.Next(1, 10);
+                    Console.Write(juggedArrayTwo[i][j]);
+                }
+                Console.WriteLine();
             }
 
             Console.ReadLine();
