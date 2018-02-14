@@ -73,31 +73,56 @@ namespace ConsoleApp1
 
             /*7.	Даны радиус круга и сторона квадрата. У какой фигуры площадь больше?*/
 
-            
-            Console.WriteLine("Enter the radius of the circle ");
-            int radius = int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter the values of the side of the square ");
-            int side = int.Parse(Console.ReadLine());
-            double Sr;
-            double P = 3.14;
-            Sr = (P * (radius * radius));
-            Console.Write("Area of a circle "); Console.WriteLine(Sr);
-            double Ss = side * side;
-            Console.Write("Square of a square "); Console.WriteLine(Ss);
-            Console.WriteLine();
+            //Console.WriteLine("Enter the radius of the circle ");
+            //int radius = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the values of the side of the square ");
+            //int side = int.Parse(Console.ReadLine());
+            //double Sr;
+            //double P = 3.14;
+            //Sr = (P * (radius * radius));
+            //Console.Write("Area of a circle "); Console.WriteLine(Sr);
+            //double Ss = side * side;
+            //Console.Write("Square of a square "); Console.WriteLine(Ss);
+            //Console.WriteLine();
 
-            if (Sr > Ss)
-            {
-                Console.WriteLine("Area of the circle is larger than the square");
-                Console.WriteLine();
-            }
-            else if (Sr < Ss)
-            {
-                Console.WriteLine("Square of the square is larger than the area of the circle");
-                Console.WriteLine();
-            }
-            else Console.WriteLine("The square of the square and the area of the circle are equal");
+            //if (Sr > Ss)
+            //{
+            //    Console.WriteLine("Area of the circle is larger than the square");
+            //    Console.WriteLine();
+            //}
+            //else if (Sr < Ss)
+            //{
+            //    Console.WriteLine("Square of the square is larger than the area of the circle");
+            //    Console.WriteLine();
+            //}
+            //else Console.WriteLine("The square of the square and the area of the circle are equal");
+            //Console.WriteLine();
+
+            /*8.    Даны объемы и массы двух тел из разных материалов. Материал какого из тел имеет большую плотность?*/
+            Console.WriteLine("Enter V and M for solid #1");
+            int Vs = int.Parse(Console.ReadLine());
+            int Vs2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter V and M for solid #2");
+            int MasS = int.Parse(Console.ReadLine());
+            int MasS2 = int.Parse(Console.ReadLine());
+            int solid, solid2;
+            solid = Vs / MasS;
+            solid2 = Vs2 / MasS2;
+            Console.Write("The density of the first material"); Console.WriteLine(solid);
+            Console.Write("The density of the second material"); Console.WriteLine(solid2);
             Console.WriteLine();
+            if (solid > solid2)
+            {
+                Console.WriteLine("The density of the first material is higher than the second");
+            }
+           else if (solid < solid2)
+            {
+                Console.WriteLine("The density of the second material is higher than the first");
+            }
+            else
+            {
+                Console.WriteLine("The density of both materials is the same");
+            }
 
 
 
