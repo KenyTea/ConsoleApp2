@@ -97,52 +97,139 @@ namespace _14._02._18
 
             //Console.WriteLine(maxLengthSubarrayIndex + " " + maxLengthSubarrayValue);
             //Console.WriteLine(maxSumSubarrayIndex + " " + maxSumSubarrayValue);
-            Random rand = new Random();
-            int find = int.Parse(Console.ReadLine());
-            Console.WriteLine();
-            int[] arrBinarFound = new int[10];
-            for (int i = 0; i < arrBinarFound.Length; i++)
+
+            #region Mydubelfinde
+            //Random rand = new Random();
+            //int find = int.Parse(Console.ReadLine());
+            //Console.WriteLine();
+            //int[] arrBinarFound = new int[10];
+            //for (int i = 0; i < arrBinarFound.Length; i++)
+            //{
+            //arrBinarFound[i] = rand.Next(0, 10);
+            //    Console.Write(arrBinarFound[i] + " ");
+            //}
+            //Console.WriteLine();
+
+            //Array.Sort(arrBinarFound);                                      // -------Sort--------
+
+            //for (int i = 0; i < arrBinarFound.Length; i++)
+            //{
+            //    Console.Write(arrBinarFound[i] + " ");
+            //int left = arrBinarFound[0];
+            //int right = arrBinarFound[9];
+            //int midle = left + ((right - left) / 2);
+            //    if (find < midle)
+            //    {
+            //        for (int j = 0; j < midle; j++)
+            //        {
+            //            if (arrBinarFound[j] == find)
+            //            {
+            //                Console.WriteLine("Found in " + arrBinarFound[j]);
+            //            }
+            //            else if (find > midle)
+            //            {
+            //                for (int k = midle; k < right; k++)
+            //                {
+            //                    if (arrBinarFound[k] == find)
+            //                    {
+            //                        Console.WriteLine("Found in " + arrBinarFound[k]);
+            //                    }
+            //                }
+            //            }
+            //        }
+            //    }
+            //}
+
+
+            //Console.WriteLine();
+            ////Console.WriteLine(left);
+            ////Console.WriteLine(right);
+            ////Console.WriteLine(midle);
+            #endregion Mydubelfinde                  
+            //  // https://github.com/shag-iskander-raimbayev/shag-csharp-module-three/blob/master/ArrayInCSharp/Program.cs
+            Random random = new Random();
+            int h = random.Next(3, 8);
+            int[][] juggedArray = new int[h][];
+            int maxLength = default(int);
+
+            for (int i = 0; i < juggedArray.Length; i++)
             {
-            arrBinarFound[i] = rand.Next(0, 10);
-                Console.Write(arrBinarFound[i] + " ");
+                juggedArray[i] = new int[random.Next(1, 5)];
+                if (juggedArray[i].Length > maxLength)
+                {
+                    maxLength = juggedArray[i].Length;
+                }
+
+                for (int j = 0; j < juggedArray[i].Length; j++)
+                {
+                    juggedArray[i][j] = random.Next(1, 10);
+                    Console.Write(juggedArray[i][j] + " ");
+                }
+                Console.WriteLine();
             }
             Console.WriteLine();
+            int[,] mirroredArray = new int[h, maxLength * 2];
 
-            Array.Sort(arrBinarFound);                                      // -------Sort--------
-
-            for (int i = 0; i < arrBinarFound.Length; i++)
+            for (int i = 0; i < juggedArray.Length; i++)
             {
-                Console.Write(arrBinarFound[i] + " ");
-            int left = arrBinarFound[0];
-            int right = arrBinarFound[9];
-            int midle = left + ((right - left) / 2);
-                if (find < midle)
+                for (int j = 0; j < juggedArray[i].Length; j++)
                 {
-                    for (int j = 0; j < midle; j++)
+                    mirroredArray[i, j] = juggedArray[i][j];
+                    Console.Write(mirroredArray[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+
+            int midLine = (maxLength);
+
+            for (int i = 0; i < h; i++)
+            {
+                for (int j = 0; j < midLine; j++)
+                {
+                    int oppositeElementIndex = (maxLength * 2 - 1 - j);
+                    if (mirroredArray[i, j] != 0)
                     {
-                        if (arrBinarFound[j] == find)
-                        {
-                            Console.WriteLine("Found in " + arrBinarFound[j]);
-                        }
-                        else if (find > midle)
-                        {
-                            for (int k = midle; k < right; k++)
-                            {
-                                if (arrBinarFound[k] == find)
-                                {
-                                    Console.WriteLine("Found in " + arrBinarFound[k]);
-                                }
-                            }
-                        }
+                        mirroredArray[i, oppositeElementIndex] = 10 - mirroredArray[i, j];
                     }
                 }
             }
 
-           
-            Console.WriteLine();
-            //Console.WriteLine(left);
-            //Console.WriteLine(right);
-            //Console.WriteLine(midle);
+            for (int i = 0; i < h; i++)
+            {
+                for (int j = 0; j < maxLength * 2; j++)
+                {
+                    Console.Write(mirroredArray[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+
+
+
+            Console.ReadLine();
+        }
+
+        static int BinarySearch(int[] array, int left, int right, int value)
+        {
+            if (left < right)
+            {
+                int midPoint = left + (right - left) / 2;
+                if (array[midPoint] == value)
+                {
+                    return midPoint;
+                }
+                else if (array[midPoint] > value)
+                {
+                    return BinarySearch(array, left, midPoint - 1, value);
+                }
+                else
+                {
+                    return BinarySearch(array, midPoint + 1, right, value);
+                }
+            }
+            else
+            {
+                return -1;
+            }
 
             Console.ReadLine();
         }
