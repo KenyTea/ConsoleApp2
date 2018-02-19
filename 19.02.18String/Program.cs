@@ -323,12 +323,28 @@ namespace _19._02._18String
             
              //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-                string name = "Alexey";
-
-            foreach (var item in name)
+            string word = Console.ReadLine();
+            string encodedWord = "";
+                int rotate = int.Parse(Console.ReadLine());
+                int[] nameInt = new int[word.Length];
+            for(int i = 0; i < word.Length;i++)
             {
-                Console.WriteLine((int)item );
+                nameInt[i] = (int)word[i];
+                encodedWord += (char)(nameInt[i] + (rotate + 1));
+
             }
+
+            Console.WriteLine(encodedWord);
+
+            //char[] encodedWord = new char[word.Length];
+
+            //Console.WriteLine(word);
+
+            //foreach (var item in word)
+            //{
+            //    Console.WriteLine((int)item );
+            //}
+
 
             Console.ReadLine();
         }
