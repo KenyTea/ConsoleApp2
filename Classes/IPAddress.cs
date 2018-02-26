@@ -58,7 +58,7 @@ namespace Classes
             return binaryString.ToCharArray();
         }
 
-        public string GetUserFriendlyBinaryAddress()
+        public string GetUserFriendlyBinaryAddress(char [] array)
         {
             int startIndex = 0, offsetValue = 8;
             string returnValue = "";
@@ -67,30 +67,31 @@ namespace Classes
             {
                 for (int i = startIndex; i < startIndex + offsetValue; i++)
                 {
-                    returnValue += _ipBinaryRepresentation[i];
+                    returnValue += array[i];
                 }
                 returnValue += '.';
                 startIndex += offsetValue;
             }
-            return new string(returnValue.Take(returnValue.Length - 1).ToArray());
+            return (new string(returnValue.Take(returnValue.Length - 1).ToArray()).PadRight(35 ,'0');
         }
         #endregion
 
-        public string GetUserFriendlyBinaryMask(int subnetMask)
+        public string GetUserFriendlySubnetMask(int subnetMask)
         {
-            int startIndex = 0, offsetValue = 8;
-            string returnValue = "";
+            char[] binaryMask = new char[32];
 
-            while (startIndex != 32)
+
+            for (int i = 0; i <= subnetMask; i++)
             {
-                for (int i = startIndex; i < startIndex + offsetValue; i++)
-                {
-                    returnValue += _ipBinaryRepresentation[i];
-                }
-                returnValue += '.';
-                startIndex += offsetValue;
+                binaryMask[i] = '1';
             }
-            return new string(returnValue.Take(returnValue.Length - 1).ToArray());
+
+            for (int i = subnetMask; i < 32; i++)
+            {
+                binaryMask[i] = '0';
+            }
+
+            return GetUserFriendlyBinaryAddress(binaryMask);
         }
 
         #region Constructors
