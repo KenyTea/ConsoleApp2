@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Classes
 {
-    public class IPAddress
+    public class IpAddress
     {
         #region Properties
         // 192.168.12.2
