@@ -76,6 +76,23 @@ namespace Classes
         }
         #endregion
 
+        public string GetUserFriendlyBinaryMask(int subnetMask)
+        {
+            int startIndex = 0, offsetValue = 8;
+            string returnValue = "";
+
+            while (startIndex != 32)
+            {
+                for (int i = startIndex; i < startIndex + offsetValue; i++)
+                {
+                    returnValue += _ipBinaryRepresentation[i];
+                }
+                returnValue += '.';
+                startIndex += offsetValue;
+            }
+            return new string(returnValue.Take(returnValue.Length - 1).ToArray());
+        }
+
         #region Constructors
         public IpAddress(string inputIpValue, int subnetMask)
         {
