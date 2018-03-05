@@ -10,6 +10,11 @@ namespace Инкапсуляция
     {
         static void Main(string[] args)
         {
+           // public class Account { }
+
+       
+
+        
         }
     }
 }

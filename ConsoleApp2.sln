@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classes26.02.18", "Classes\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Инкапсуляция", "Инкапсуляция\Инкапсуляция.csproj", "{38F119F1-ABD5-4180-84D0-E76EB651E23C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Encapsulation", "Наследование\Encapsulation.csproj", "{030EF7E9-3900-461D-989F-CD77F7C1CB84}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,18 @@ Global
 		{38F119F1-ABD5-4180-84D0-E76EB651E23C}.Release|x64.Build.0 = Release|Any CPU
 		{38F119F1-ABD5-4180-84D0-E76EB651E23C}.Release|x86.ActiveCfg = Release|Any CPU
 		{38F119F1-ABD5-4180-84D0-E76EB651E23C}.Release|x86.Build.0 = Release|Any CPU
+		{030EF7E9-3900-461D-989F-CD77F7C1CB84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{030EF7E9-3900-461D-989F-CD77F7C1CB84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{030EF7E9-3900-461D-989F-CD77F7C1CB84}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{030EF7E9-3900-461D-989F-CD77F7C1CB84}.Debug|x64.Build.0 = Debug|Any CPU
+		{030EF7E9-3900-461D-989F-CD77F7C1CB84}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{030EF7E9-3900-461D-989F-CD77F7C1CB84}.Debug|x86.Build.0 = Debug|Any CPU
+		{030EF7E9-3900-461D-989F-CD77F7C1CB84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{030EF7E9-3900-461D-989F-CD77F7C1CB84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{030EF7E9-3900-461D-989F-CD77F7C1CB84}.Release|x64.ActiveCfg = Release|Any CPU
+		{030EF7E9-3900-461D-989F-CD77F7C1CB84}.Release|x64.Build.0 = Release|Any CPU
+		{030EF7E9-3900-461D-989F-CD77F7C1CB84}.Release|x86.ActiveCfg = Release|Any CPU
+		{030EF7E9-3900-461D-989F-CD77F7C1CB84}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

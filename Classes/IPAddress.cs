@@ -72,7 +72,7 @@ namespace Classes
                 returnValue += '.';
                 startIndex += offsetValue;
             }
-            return (new string(returnValue.Take(returnValue.Length - 1).ToArray()).PadRight(35 ,'0');
+            return (new string(returnValue.Take(returnValue.Length - 1).ToArray()).PadRight(35 ,'0'));
         }
         #endregion
 
