@@ -40,7 +40,7 @@ namespace Перегрузка
             var result2 = usd + usd2;
 
             //Console.WriteLine(result);
-            Console.WriteLine( result2);
+            Console.WriteLine(Convert.ToInt32(result2));
         }
     }
 }
