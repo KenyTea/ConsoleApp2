@@ -11,6 +11,11 @@ namespace Day7Tanks
     {
         List<Tank> team1;
         List<Tank> team2;
+        public War()
+        {
+            team1 = new List<Tank>();
+            team2 = new List<Tank>();
+        }
 
     }
 }
