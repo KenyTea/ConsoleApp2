@@ -57,5 +57,6 @@ namespace HWПерегрузка.Models
                 this.TankType.ToString(), this.Ammunition, this.Armor, this.Maneuverablility);
             return info;
         }
+
     }
 }
